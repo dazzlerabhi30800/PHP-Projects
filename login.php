@@ -3,7 +3,8 @@ session_start();
 if(isset($_SESSION['unique_id'])){ // if user is logged in
         header("location: user.php");
 }
-?>  
+?> 
+
 
 
 <!DOCTYPE html>
@@ -15,49 +16,37 @@ if(isset($_SESSION['unique_id'])){ // if user is logged in
     <link rel="stylesheet" href="style.css">
     <!-- <link rel="stylesheet" href="/css/all.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-
-   
     <title>Chatroom</title>
 </head>
 <body>
     <div class="wrapper">
-        <section class="form signup">
+        <section class="form login">
         <header>Realtime Chat App</header>
-        <form action="#" enctype="multipart/form-data" autocomplete = "off">
-            <div class="error-txt"></div>
-            <div class="name-details">
-                <div class="field input">
-                    <label>First name</label>
-                    <input type="text" placeholder = "First name" name = "fname" required>
-                </div>
-                <div class="field input">
-                    <label>Last name</label>
-                    <input type="text" placeholder = "Last name" name="lname" required>
-                </div>
-            </div>
+        <form action="#">
+            <div class="error-txt">This is an error message!</div>
+            
+            
                 <div class="field input">
                     <label>Email Address</label>
-                    <input type="email" placeholder = "Enter your email address" name="email" required>
+                    <input type="text" placeholder = "Enter your email" name = "email" >
                 </div>
                 <div class="field input">
                     <label>Password</label>
-                    <input type="password" placeholder = "Password" name="password" required>
+                    <input type="password" placeholder = "Enter your Password" name = "password">
                     <i class="fas fa-eye"></i>
                 </div>
-                <div class="field image">
-                    <label>Select image</label>
-                    <input type="file" name="image" >
-                </div>
+               
                 <div class="field button">
                    <input type="submit" value = "Continue to chat">
                 </div>
            
         </form>
-        <div class="link">Already signed up?<a href="login.php"> Login Now</a></div>
+        <div class="link">Already signed up?<a href="index.php"> Signup Now</a></div>
     </section>
     </div>
 
-    <script src="javascript/signup.js"></script>
+
     <script src="javascript/pass-show-hide.js"></script>
+    <script src="javascript/login.js"></script>
 </body>
 </html>
